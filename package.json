@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "build:ui": "rm -rf dist && cd C:/Users/Hamza/Desktop/JobSearchApi/app/frontend/ && npm run build && cp -r dist C:/Users/Hamza/Desktop/JobSearchApi/api",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
