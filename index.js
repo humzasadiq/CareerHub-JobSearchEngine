@@ -3,8 +3,10 @@ const app = express();
 const linkedIn = require('linkedin-jobs-api'); // Make sure this is correctly installed and configured
 const cors = require('cors');
 
+app.use(express.static('dist'))
 app.use(cors());
 app.use(express.json());
+
 
 const unknownEndpoint = (request, response) => {
     response.status(404).send({ error: 'unknown endpoint' });
