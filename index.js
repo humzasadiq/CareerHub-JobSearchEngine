@@ -4,7 +4,7 @@ const linkedIn = require('linkedin-jobs-api'); // Make sure this is correctly in
 const cors = require('cors');
 const axios = require('axios');
 
-app.use(express.static('dist'))
+// app.use(express.static('dist'))
 app.use(cors());
 app.use(express.json());
 
