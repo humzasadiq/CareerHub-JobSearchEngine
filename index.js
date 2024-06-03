@@ -21,7 +21,7 @@ app.post('/api/jobs', async (req, res) => {
         location,
         dateSincePosted,
         limit: limit, // Convert limit to a number
-        sortBy
+        sortBy,
     };
     try {
         const response = await linkedIn.query(queryOptions); // Query LinkedIn API
@@ -38,15 +38,14 @@ app.post('/api/jobs1', async (req, res) => {
         method: 'GET',
         url: 'https://jsearch.p.rapidapi.com/search',
         headers: {
-        'X-RapidAPI-Key': 'b03a04e701msh8d1955b60a71041p12f45ajsnf531f5a0bc5e',
+        'X-RapidAPI-Key': '3c4f3e4e5dmsh16b680d77f18e08p185692jsned8cf5fd5155',
         'X-RapidAPI-Host': 'jsearch.p.rapidapi.com',
         },
         params: {
         query: query,
         page: page,
-        num_pages: '1',
-        date_posted: date_posted
-        
+        num_pages: page,
+        date_posted: date_posted,
         },
     };
     console.log(options);
@@ -67,3 +66,4 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
+
