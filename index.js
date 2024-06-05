@@ -3,7 +3,9 @@ const app = express();
 const linkedIn = require('linkedin-jobs-api'); // Make sure this is correctly installed and configured
 const cors = require('cors');
 const axios = require('axios');
+const job = require('~/server_restart.js')
 
+job.start();
 app.use(express.static('dist'))
 app.use(cors());
 app.use(express.json());
