@@ -1,7 +1,7 @@
 ## Backend Server-less API with Vercel
 
 Made this server-less version of the same API with Vercel.  
-Serverless Website URL: https://careerhub-jobportal-frontend.vercel.app/
+Serverless Website URL: [https://careerhub-jobportal-frontend.vercel.app/](https://careerhub-portal.vercel.app/)
 
 ## Backend Server API with Render
 
