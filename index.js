@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const linkedIn = require('linkedin-jobs-api'); // Make sure this is correctly installed and configured
+const linkedIn = require('linkedin-jobs-api');
 const cors = require('cors');
 const axios = require('axios');
 // const job = require('./server_restart.js')
@@ -22,11 +22,11 @@ app.post('/api/jobs', async (req, res) => {
         keyword : jobTitle,
         location,
         dateSincePosted,
-        limit: limit, // Convert limit to a number
+        limit: limit,
         sortBy,
     };
     try {
-        const response = await linkedIn.query(queryOptions); // Query LinkedIn API
+        const response = await linkedIn.query(queryOptions);
         res.json(response); // Send job listings data to the frontend
     } catch (error) {
         console.error('Error fetching job listings from LinkedIn:', error);
